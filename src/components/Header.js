@@ -1,4 +1,5 @@
 import React from "react";
+import { TotalItems } from "./TotalItems";
 
 export const Header = () => {
   return (
@@ -9,7 +10,9 @@ export const Header = () => {
           <br /> Items
         </p>
       </div>
-      <div className="header-right"></div>
+      <div className="header-right">
+        <TotalItems />
+      </div>
     </div>
   );
 };

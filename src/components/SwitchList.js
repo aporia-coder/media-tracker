@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 export const SwitchList = () => {
   return (
-    <div>
+    <div className="switchlist">
       <Link to="/books" className="link">
         Books
       </Link>

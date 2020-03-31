@@ -5,7 +5,9 @@ export const Book = ({ book }) => {
   return (
     <>
       <li>
-        {book.name}, {book.author}
+        <p>{book.name}</p>
+        <p>{book.author}</p>
+        <AiFillDelete />
       </li>
     </>
   );

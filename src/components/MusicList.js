@@ -6,12 +6,14 @@ import { Music } from "./Music";
 export const MusicList = () => {
   const { items } = useContext(GlobalContext);
   return (
-    <ul>
-      {items
-        .filter(item => item.type === "music")
-        .map(song => (
-          <Music song={song} key={song.id} />
-        ))}
-    </ul>
+    <div className="container-list">
+      <ul>
+        {items
+          .filter(item => item.type === "music")
+          .map(song => (
+            <Music song={song} key={song.id} />
+          ))}
+      </ul>
+    </div>
   );
 };

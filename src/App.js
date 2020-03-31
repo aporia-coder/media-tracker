@@ -13,19 +13,18 @@ import { Form } from "./components/Form";
 
 function App() {
   return (
-    <div className="container">
-      <GlobalContextProvider>
+    <GlobalContextProvider>
+      <div className="container">
         <Header />
         <SwitchList />
-        <TotalItems />
         <Switch>
           <Route exact path="/books" component={BookList} />
           <Route exact path="/films" component={FilmList} />
           <Route exact path="/music" component={MusicList} />
         </Switch>
         <Form />
-      </GlobalContextProvider>
-    </div>
+      </div>
+    </GlobalContextProvider>
   );
 }
 

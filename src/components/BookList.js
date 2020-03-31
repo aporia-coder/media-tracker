@@ -6,7 +6,7 @@ import { Book } from "./Book";
 export const BookList = () => {
   const { items } = useContext(GlobalContext);
   return (
-    <div>
+    <>
       <ul>
         {items
           .filter(item => item.type === "book")
@@ -14,6 +14,6 @@ export const BookList = () => {
             <Book book={book} key={book.id} />
           ))}
       </ul>
-    </div>
+    </>
   );
 };

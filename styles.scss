@@ -1,3 +1,8 @@
+//Variables
+$purplecolor: rgb(147, 147, 238);
+$graycolor: rgb(176, 176, 177);
+$shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
 * {
   padding: 0;
   margin: 0;
@@ -6,11 +11,27 @@
 
 .link {
   text-decoration: none;
-  color: inherit;
+  color: $graycolor;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8rem;
+  padding: 0 1rem;
+}
+
+.switchlist {
+  padding: 0 5rem;
+  // border: 1px solid green;
 }
 
 li {
   list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // border: 1px dotted blue;
+  padding: 0.5rem 6rem;
+  margin: 0.5rem 0;
+  box-shadow: $shadow;
 }
 
 body {
@@ -40,8 +61,8 @@ body {
 
 .header {
   display: grid;
-  background: url(./img/books.jpg) center center / cover;
-  color: white;
+  background: url(./img/background.jpg) center center / cover;
+  color: #fff;
   grid-template-columns: 1fr 1fr 40%;
   // border: 1px solid red;
   width: 100%;
@@ -54,11 +75,13 @@ body {
     font-size: 2.8rem;
     font-weight: 200;
     grid-column: 1/3;
-    border-bottom: 5px solid blue;
+    border-bottom: 5px solid $purplecolor;
     // border: 1px dotted blue;
   }
   &-right {
     grid-column: 3/4;
-    // border: 1px dotted blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
